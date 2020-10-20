@@ -1,0 +1,28 @@
+{
+    "data": [
+
+        {
+            "shopName": "Nike React Miler",
+            "pick": "999",
+            "img": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/05e36463-7f7d-4cbd-b246-e7e1a804bffa/react-miler-男子跑步鞋-5qHnHC.jpg"
+
+        },
+        {
+            "shopName": "Nike Air Force 1 '07",
+            "pick": "749",
+            "img": "https://c.static-nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/gsuin11ptg5qgktmzoat/air-force-1-07-男子运动鞋-jnTp8zLd.jpg"
+
+        }, {
+            "shopName": "Nike Zoom Winflo 7",
+            "pick": "749",
+            "img": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/1e0e4920-a27b-40d7-b961-bc3e7fd7e302/zoom-winflo-7-男子跑步鞋-LvpcXq.jpg"
+
+        }, {
+            "shopName": "Nick Flex Experience RN 9",
+            "pick": "499",
+            "img": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/c4a99353-5887-45b7-8ce6-954653bf5d5f/flex-experience-rn-9-男子跑步鞋-ghznMp.jpg"
+
+        }
+
+    ]
+}

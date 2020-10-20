@@ -1,0 +1,44 @@
+* {
+  margin: 0px;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.nav-list {
+  min-width: 500px;
+  height: 50px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+.ele-a {
+  text-decoration: none;
+  color: #333333;
+}
+
+h2 {
+  text-align: center;
+}
+
+.shop-list {
+  text-align: center;
+}
+
+.shop-item {
+  margin: 10px;
+}
+
+.item-info{
+  text-align: center;
+}
+
+.item-img {
+  width: 200px;
+  height: 200px;
+}
