@@ -34,11 +34,23 @@ h2 {
   margin: 10px;
 }
 
-.item-info{
+.item-info {
   text-align: center;
 }
 
 .item-img {
   width: 200px;
   height: 200px;
+}
+
+
+/* 首页样式 */
+.Home {
+  text-align: center;
+}
+
+.home-list li{
+  margin: 10px;
+  background-color: #ccc;
+  width: 150px;
 }

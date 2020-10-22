@@ -1,10 +1,10 @@
-// import React, { useEffect, useState } from "react";
 import React from "react";
-
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import ShopList from "./ShopList";
-import ShopItem from "./ShopItem";
+import Home from "./Home";
+
+import ShopList from "./components/ShopList";
+import ShopItem from "./components/ShopItem";
 
 import "./App.css";
 export default function App() {
@@ -40,10 +40,6 @@ export default function App() {
       </Switch>
     </Router>
   );
-}
-
-function Home() {
-  return <h2>Home</h2>;
 }
 
 function About() {
