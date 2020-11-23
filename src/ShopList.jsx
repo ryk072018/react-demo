@@ -14,7 +14,6 @@ function ShopList() {
     );
 
     const items = await datalist.json();
-    // console.log(items);
     setItems(items.data);
   };
 

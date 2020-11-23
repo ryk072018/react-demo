@@ -2,9 +2,13 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Home from "./Home";
+import Movies from "./components/Movies";
+import Books from "./components/Books";
 
-import ShopList from "./components/ShopList";
+import ShopList from "./ShopList";
 import ShopItem from "./components/ShopItem";
+
+import About from "./About";
 
 import "./App.css";
 export default function App() {
@@ -14,7 +18,7 @@ export default function App() {
         <nav>
           <ul className="nav-list">
             <li>
-              <Link to="/" className="ele-a">
+              <Link to="/home" className="ele-a">
                 首页
               </Link>
             </li>
@@ -31,19 +35,21 @@ export default function App() {
           </ul>
         </nav>
       </div>
-      <Switch>
-        <Route path="/shopList" exact component={ShopList}></Route>
-        <Route path="/shopList/:id" component={ShopItem}></Route>
-        <Route path="/about" component={About}></Route>
-        <Route path="/" exact component={Home}></Route>
-        <Route path="*" component={NotFound}></Route>
-      </Switch>
+      <div className="container-all">
+        <Switch>
+          <Route path="/shopList" exact component={ShopList}></Route>
+          <Route path="/shopList/:id" component={ShopItem}></Route>
+          <Route path="/about" component={About}></Route>
+          <Route path="/home/movies" component={Movies}></Route>
+          <Route path="/home/books" component={Books}></Route>
+          <Route path="/home" exact component={Home}></Route>
+          <Route path="/*">
+            <NotFound />
+          </Route>
+        </Switch>
+      </div>
     </Router>
   );
-}
-
-function About() {
-  return <h2>About</h2>;
 }
 
 function NotFound() {

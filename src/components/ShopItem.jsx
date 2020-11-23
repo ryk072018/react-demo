@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 function ShopItem({ match }) {
-  // console.log(match.params.id);
   useEffect(() => {
     fetchItem();
   }, []);
