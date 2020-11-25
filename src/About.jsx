@@ -3,7 +3,9 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Component1 from "./components/about/Component1";
 import Component2 from "./components/about/Component2";
-import Component3 from "./components/about/Component3";
+import Component4 from "./components/about/Component4";
+
+import "./about.css"
 
 export default function About() {
   return (
@@ -13,7 +15,7 @@ export default function About() {
         morning
         <Component1 name="sovoo" />
         <Component2 />
-        <Component3 />
+        <Component4 />
       </div>
     </div>
   );

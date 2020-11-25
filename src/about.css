@@ -1,0 +1,11 @@
+.delItem {
+    cursor: pointer;
+    margin-left: 20px;
+    visibility: hidden;
+    /* display: none; */
+}
+
+.liItem:hover .delItem {
+    visibility: visible;
+    /* display: block; */
+}

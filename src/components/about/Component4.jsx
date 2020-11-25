@@ -9,13 +9,28 @@ export default class TodoApp extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleItem = this.handleItem.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
   }
 
   render() {
     return (
       <div>
         <h3>TodoList</h3>
-        <TodoList items={this.state.items} />
+        <ul>
+          {this.state.items.map((item) => (
+            <li key={item.id} className="liItem">
+              <input type="checkbox" onChange={this.handleItem} />
+              <span className="todoInfo"> {item.text}</span>
+              <span
+                className="delItem"
+                onClick={() => this.deleteItem(item.id)}
+              >
+                X
+              </span>
+            </li>
+          ))}
+        </ul>
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="new-todo">输入要做的事情</label>
           <input
@@ -31,7 +46,6 @@ export default class TodoApp extends Component {
   }
 
   handleChange(e) {
-    // console.log(e);
     this.setState({ text: e.target.value });
   }
 
@@ -49,56 +63,28 @@ export default class TodoApp extends Component {
       text: "",
     }));
   }
-}
-
-class TodoList extends Component {
-  constructor(props) {
-    super(props);
-    this.handleItem = this.handleItem.bind(this);
-    this.deleteItem = this.deleteItem.bind(this);
-  }
 
   handleItem(e) {
     const parentEle = e.target.parentNode;
-    const todoItemInfo = document.querySelector(".todoInfo");
     if (e.target.checked) {
-      todoItemInfo.style.textDecoration = "line-through";
+      parentEle.style.textDecoration = "line-through";
     } else {
-      todoItemInfo.style.textDecoration = "none";
+      parentEle.style.textDecoration = "none";
     }
   }
 
-  // componentDidMount() {
-  //   this.deleteItem();
-  // }
-
-  
-
   deleteItem(itemID) {
-    // console.log(this.props.items);
-    console.log(itemID);
-
-    this.props.items.map((item, i) => {
+    this.state.items.map((item, i) => {
       if (item.id === itemID) {
-        this.props.items.splice(i, 1);
-        console.log("111");
+        this.state.items.splice(i, 1);
+        this.setState((state) => {
+          return (state = this.state);
+        });
       }
     });
   }
 
-  render() {
-    return (
-      <ul>
-        {this.props.items.map((item) => (
-          <li key={item.id} className="liItem">
-            <input type="checkbox" onChange={this.handleItem} />
-            <span className="todoInfo"> {item.text}</span>
-            <span className="delItem" onClick={() => this.deleteItem(item.id)}>
-              X
-            </span>
-          </li>
-        ))}
-      </ul>
-    );
-  }
+  componentDidMount() {}
+
+  componentDidUpdate() {}
 }
