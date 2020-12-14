@@ -42,7 +42,8 @@ export default function App() {
           <Route path="/about" component={About}></Route>
           <Route path="/home/movies" component={Movies}></Route>
           <Route path="/home/books" component={Books}></Route>
-          <Route path="/home" exact component={Home}></Route>
+          <Route path="/home" component={Home}></Route>
+          <Route path="/" exact component={Home}></Route>
           <Route path="/*">
             <NotFound />
           </Route>

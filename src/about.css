@@ -2,10 +2,14 @@
     cursor: pointer;
     margin-left: 20px;
     visibility: hidden;
-    /* display: none; */
 }
 
 .liItem:hover .delItem {
     visibility: visible;
-    /* display: block; */
+}
+
+
+.btn-click {
+    width: 40px;
+    margin-right: 10px;
 }
