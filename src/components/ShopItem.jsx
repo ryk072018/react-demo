@@ -17,17 +17,15 @@ function ShopItem({ match }) {
   };
 
   return (
-    <div className="item-info">
-      {items.map((item) => {
-        if (item.id === match.params.id) {
+    <div className="item-info">      
+      {items.filter(item=>item.id === match.params.id).map((item) => {
           return (
             <div key={item.id}>
               <h3>{item.shopName}</h3>
               <img className="item-img" src={item.img} alt="图片" />
               <h3>￥{item.pick}</h3>
             </div>
-          );
-        }
+          );        
       })}
     </div>
   );

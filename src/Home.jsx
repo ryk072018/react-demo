@@ -1,16 +1,9 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
   Link,
-  Switch,
-  Route,
-  Redirect,
-  useRouteMatch,
-  useParams,
 } from "react-router-dom";
 
 export default function Home() {
-  let { path, url } = useRouteMatch();
 
   return (
     <div className="Home">

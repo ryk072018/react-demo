@@ -1,3 +1,9 @@
+
+.infoabout{
+    margin-bottom: 10px;
+}
+
+
 .delItem {
     cursor: pointer;
     margin-left: 20px;
@@ -13,3 +19,4 @@
     width: 40px;
     margin-right: 10px;
 }
+

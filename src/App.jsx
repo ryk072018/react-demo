@@ -40,6 +40,7 @@ export default function App() {
           <Route path="/shopList" exact component={ShopList}></Route>
           <Route path="/shopList/:id" component={ShopItem}></Route>
           <Route path="/about" component={About}></Route>
+
           <Route path="/home/movies" component={Movies}></Route>
           <Route path="/home/books" component={Books}></Route>
           <Route path="/home" component={Home}></Route>

@@ -74,7 +74,7 @@ export default class TodoApp extends Component {
   }
 
   deleteItem(itemID) {
-    this.state.items.map((item, i) => {
+    this.state.items.forEach((item, i) => {
       if (item.id === itemID) {
         this.state.items.splice(i, 1);
         this.setState((state) => {
@@ -83,8 +83,4 @@ export default class TodoApp extends Component {
       }
     });
   }
-
-  componentDidMount() {}
-
-  componentDidUpdate() {}
 }
